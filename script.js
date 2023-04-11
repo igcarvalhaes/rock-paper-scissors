@@ -79,11 +79,11 @@ function game () {
         console.log(`You: ${playerScore} - Machine: ${computerScore} - Ties: ${tied}`);        
     }
     if(playerScore > computerScore) {
-        console.log("You won!");
+        console.log(`You won! Final score - You: ${playerScore} - Machine: ${computerScore} - Ties: ${tied}`);
     } else if (playerScore === computerScore) {
-        console.log("Tied!");
+        console.log(`Tied! Final score - You: ${playerScore} - Machine: ${computerScore} - Ties: ${tied}`);
     } else {
-        console.log("Machine wins!");
+        console.log(`Machine wins! Final score - You: ${playerScore} - Machine: ${computerScore} - Ties: ${tied}`);
     }
 }
 
