@@ -13,33 +13,41 @@ function getComputerChoice () {
 function playRound (playerSelection, computerSelection) {
     const player = playerSelection.toLowerCase();
     const computer = computerSelection.toLowerCase();
-
     switch(player) {
         case "rock":
             if (computer === "rock"){
-                return "Tied!";
+                console.log("Tied!");
+                return 2;
             } else if (computer === "paper") {
-                return "You lost! Paper beats Rock!";
+                console.log(`You lost! Paper beats Rock!`);
+                return 1;
             } else {
-                return "You won! Rock beats Scissors!";
+                console.log(`You won! Rock beats Scissors!`);
+                return 0;                
             }
         break;
         case "paper":
             if (computer === "rock") {
-                return "You won! Paper beats Rock!";
+                console.log(`You won! Paper beats Rock!`)
+                return 0;
             } else if (computer === "paper") {
-                return "Tied!";
+                console.log("Tied!");
+                return 2;
             } else {
-                return "You lost! Scissors beats Paper!";
+                console.log(`You lost! Scissors beats Paper!`);
+                return 1;
             }
         break;
         case "scissors":
             if(computer === "rock"){
-                return "You lost! Rock beats Scissors!";
+                console.log(`You lost! Rock beats Scissors!`)
+                return 1;
             } else if (computer === "paper"){
-                return "You won! Scissors beats Paper!";
+                console.log(`You won! Scissors beats Paper!`);
+                return 0;
             } else {
-                return "Tied!";
+                console.log("Tied!");
+                return 2;
             }
         break;
         default:
@@ -50,10 +58,11 @@ function playRound (playerSelection, computerSelection) {
 function game () {
     let playerSelection;
     let computerSelection;
+
     for (let i=0; i<5; i++){
         playerSelection = prompt("Choose between Rock, Paper and Scissors.");
         computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));              
+        console.log((playRound(playerSelection, computerSelection)));              
     } 
 }
 
