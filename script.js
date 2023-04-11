@@ -17,7 +17,6 @@ function playRound (playerSelection, computerSelection) {
         case "rock":
             if (computer === "rock"){
                 console.log("Tied!");
-                return 2;
             } else if (computer === "paper") {
                 console.log(`You lost! Paper beats Rock!`);
                 return 1;
@@ -31,8 +30,7 @@ function playRound (playerSelection, computerSelection) {
                 console.log(`You won! Paper beats Rock!`)
                 return 0;
             } else if (computer === "paper") {
-                console.log("Tied!");
-                return 2;
+                console.log("Tied!");    
             } else {
                 console.log(`You lost! Scissors beats Paper!`);
                 return 1;
@@ -47,7 +45,6 @@ function playRound (playerSelection, computerSelection) {
                 return 0;
             } else {
                 console.log("Tied!");
-                return 2;
             }
         break;
         default:
@@ -59,11 +56,35 @@ function game () {
     let playerSelection;
     let computerSelection;
 
+    let resultado;
+    let playerScore = 0;
+    let computerScore = 0;
+    let tied = 0;
+    
     for (let i=0; i<5; i++){
         playerSelection = prompt("Choose between Rock, Paper and Scissors.");
         computerSelection = getComputerChoice();
-        console.log((playRound(playerSelection, computerSelection)));              
-    } 
+        resultado = (playRound(playerSelection, computerSelection));
+        console.log(resultado);
+        if (resultado === 0){
+            ++playerScore;
+            console.log(playerScore);
+        }  else if (resultado === 1) {
+            ++computerScore;
+            console.log(computerScore);
+        }  else {
+            ++tied;
+            console.log(tied);
+        }
+        console.log(`You: ${playerScore} - Machine: ${computerScore} - Ties: ${tied}`);        
+    }
+    if(playerScore > computerScore) {
+        console.log("You won!");
+    } else if (playerScore === computerScore) {
+        console.log("Tied!");
+    } else {
+        console.log("Machine wins!");
+    }
 }
 
 game();
