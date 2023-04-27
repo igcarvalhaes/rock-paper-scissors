@@ -6,8 +6,9 @@
 
 body {
     background: rgb(131,58,180);
-background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     font-family: 'Roboto', sans-serif;
+    font-family:'Press Start 2P', cursive;
     color: white;
 }
 
@@ -42,9 +43,37 @@ background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%
     font-weight: bold;
 }
 
+#score-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-score-panel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+}
+
+.game-status {
+    display: flex;
+    justify-content: center;
+}
+
 button {
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
     border-radius: 10px;
  }
+button:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}

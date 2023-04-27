@@ -7,17 +7,32 @@
     <title>Rock, Paper & Scissors</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="main-content">
-    <h1 id="titulo">Rock, Paper & Scissors Gameplay!</h1>
+    <h1 id="titulo">Rock,Paper &Scissors Gameplay!</h1>
     <h2 class="subtitulo">Challenge yourself and show your strategic skills in the classic game of Rock, Paper, Scissors, while having fun and getting excited with every move!</h2>
+    <div id="score-panel">
+        <div class="name-score-panel">
+            <div class="info-text">Player</div>
+            <div class="info-text">Computer</div>
+        </div>
+        <div id="score">
+        <div class="playerScore">0</div>
+        <div class="computerScore">0</div>
+        </div>
+        <div class="game-status"></div>
+    </div>
     <div id="choose-area">
         <div class="instructions">Choose between Rock, Paper or Scissors:</div>
         <button type="button" id="rock">Rock</button>
         <button type="button" id="paper">Paper</button>
         <button type="button" id="scissors">Scissors</button>
     </div>
+    
 </div>
 </body>
 </html>
