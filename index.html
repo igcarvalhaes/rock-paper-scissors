@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper & Scissors</title>
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/cd56cf11a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,22 +18,19 @@
     <h2 class="subtitulo">Challenge yourself and show your strategic skills in the classic game of Rock, Paper, Scissors, while having fun and getting excited with every move!</h2>
     <div id="score-panel">
         <div class="name-score-panel">
-            <div class="info-text">Player</div>
-            <div class="info-text">Computer</div>
-        </div>
-        <div id="score">
-        <div class="playerScore">0</div>
-        <div class="computerScore">0</div>
+            <div class="info-text"><span>Player</span><div class="playerScore">0</div></div>
+            <div class="info-text"><span>Computer</span><div class="computerScore">0</div></div>
         </div>
         <div class="game-status"></div>
     </div>
     <div id="choose-area">
         <div class="instructions">Choose between Rock, Paper or Scissors:</div>
-        <button type="button" id="rock">Rock</button>
-        <button type="button" id="paper">Paper</button>
-        <button type="button" id="scissors">Scissors</button>
+        <button type="button" id="rock"><i class="fa-regular fa-hand-back-fist fa-2xl" ></i></button>
+        <button type="button" id="paper"><i class="fa-regular fa-hand fa-2xl"></i></button>
+        <button type="button" id="scissors"><i class="fa-regular fa-hand-scissors fa-2xl"></i></button>
+        
     </div>
-    
 </div>
+<div id="footer"><span>By Igor Carvalhaes <a href="https://github.com/igcarvalhaes/rock-paper-scissors"><i class="fa-brands fa-github fa-beat" style="color: #ffffff;"></i></a></span></div>
 </body>
 </html>

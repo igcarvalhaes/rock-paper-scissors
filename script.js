@@ -72,7 +72,6 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
-
 rockButton.addEventListener('click', function(){
     playRound('rock', getComputerChoice());
 });
