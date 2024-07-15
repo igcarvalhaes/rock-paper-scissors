@@ -1,90 +1,166 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    font-family:'Press Start 2P', cursive;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    position: relative;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
 }
 
 #main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 #titulo {
-    font-size: 60px;
-    font-weight: bold;
-    width: 700px;
-    text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  width: 700px;
+  text-align: center;
 }
 
 .subtitulo {
-    width: 650px;
-    text-align: center;
-    font-size: 20px;
+  width: 650px;
+  text-align: center;
+  font-size: 20px;
 }
 
 #choose-area {
-    text-align: center;
+  text-align: center;
 }
 
 .instructions {
-    margin-bottom: 20px;
-    font-weight: bold;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #score-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .name-score-panel {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.playerScore, .computerScore {
-    margin: 20px 0;
-    text-align: center;
+.playerScore,
+.computerScore {
+  margin: 20px 0;
+  text-align: center;
 }
 
 .game-status {
-    display: flex;
-    justify-content: center;
-    color: rgb(106, 1, 133);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(106, 1, 133);
 }
 
 #footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    margin-bottom: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-
 button {
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    border-radius: 10px;
- }
-button:hover{
-    background-color: rgb(255, 0, 191);
-    cursor: pointer;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: rgb(255, 0, 191);
+  cursor: pointer;
+}
+
+@media (min-width: 377px) and (max-width: 430px) {
+  #main-content {
+    max-width: 430px;
+    gap: 60px;
+  }
+  #titulo {
+    font-size: 35px;
+    width: 420px;
+  }
+  .subtitulo {
+    max-width: 370px;
+    font-size: 20px;
+  }
+  #footer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 376px) {
+  #main-content {
+    max-width: 376px;
+  }
+  #titulo {
+    font-size: 30px;
+    width: 370px;
+  }
+  .subtitulo {
+    width: 350px;
+    font-size: 10px;
+  }
+  #footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1020px) {
+  #main-content {
+    max-width: 830px;
+  }
+  #titulo {
+    font-size: 60px;
+    width: 820px;
+  }
+  .subtitulo {
+    width: 820px;
+    font-size: 20px;
+  }
+  #footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #main-content {
+    max-width: 1024px;
+    gap: 70px;
+  }
+  #titulo {
+    font-size: 80px;
+    width: 1024px;
+  }
+  .subtitulo {
+    width: 1024px;
+    font-size: 30px;
+  }
+  #footer {
+    font-size: 20px;
+  }
 }
